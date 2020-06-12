@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "test-module5"
+    }
+  },
+  "defaultProject": "test-module5",
+  "cli": {
+    "analytics": false
+  }
 }
