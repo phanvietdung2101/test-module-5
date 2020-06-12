@@ -1,1 +1,17 @@
-<p>book-list works!</p>
+<table border="1">
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let book of bookList">
+        <td>{{book.id}}</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>
+            <a>Edit</a>
+            <a>Delete</a>
+        </td>
+    </tr>
+</table>
