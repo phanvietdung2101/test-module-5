@@ -16,11 +16,11 @@ const routes: Routes = [
     component: CreateBookComponent
   },
   {
-    path: "edit-book",
+    path: "edit-book/:id",
     component: EditBookComponent
   },
   {
-    path: "delete-book",
+    path: "delete-book/:id",
     component: DeleteBookComponent
   },
 ];

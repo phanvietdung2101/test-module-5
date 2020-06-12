@@ -27,4 +27,8 @@ export class BookService {
   deleteBook(id: number) {
     return this.http.delete('http://localhost:3000/books/' + id);
   }
-}
+
+  editBook(id: number,book : Partial<IBook>): Observable<IBook>{
+    return this.http.put<IBook>('http://localhost:3000/books/' + id,book)
+  }
+}0.

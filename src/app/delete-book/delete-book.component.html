@@ -1,1 +1,21 @@
-<p>delete-book works!</p>
+<a routerLink="">Home</a>
+<hr>
+<div>
+    <label>Id: </label>
+    <p>{{book.id}}</p>
+</div>
+<div>
+    <label>Title: </label>
+    <p>{{book.title}}</p>
+</div>
+<div>
+    <label>Author: </label>
+    <p>{{book.author}}</p>
+</div>
+<div>
+    <label>Description: </label>
+    <p>{{book.description}}</p>
+</div>
+<button (click)="onClick()">
+Delete this book
+</button>

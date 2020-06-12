@@ -10,8 +10,8 @@
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>
-            <a>Edit</a>
-            <a>Delete</a>
+            <a [routerLink]="['/edit-book',book.id]">Edit</a> || 
+            <a [routerLink]="['/delete-book',book.id]">Delete</a>
         </td>
     </tr>
 </table>
