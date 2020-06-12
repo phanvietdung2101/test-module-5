@@ -3,15 +3,19 @@
         <label>Title: </label>
         <input formControlName="title">
     </div>
-    <div *ngIf="bookForm.get('title').invalid" style="color: red;"></div>
+    <div *ngIf="bookForm.get('title').invalid" style="color: red;">
+    Invalid title</div>
     <div>
         <label>Author: </label>
         <input formControlName="author">
     </div>
+    <div *ngIf="bookForm.get('author').invalid" style="color: red;">Invalid author</div>
     <div>
         <label>Description: </label>
         <input formControlName="description">
     </div>
+    <div *ngIf="bookForm.get('description').invalid" style="color: red;">Invalid description</div>
+
     <div>
         <button type="submit">Submit</button>
     </div>
