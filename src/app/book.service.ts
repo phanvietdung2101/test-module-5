@@ -20,8 +20,8 @@ export class BookService {
     return this.http.get<IBook>('http://localhost:3000/books/' + id);
   }
 
-  createBook(book: IBook) {
-    return this.http.post('http://localhost:3000/books',book)
+  createBook(book: Partial<IBook>): Observable<IBook>{
+    return this.http.post<IBook>('http://localhost:3000/books',book)
   }
 
   deleteBook(id: number) {

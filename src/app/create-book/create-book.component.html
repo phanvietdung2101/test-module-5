@@ -1,14 +1,18 @@
-<form formGroup="bookForm" (ngSubmit)="onSubmit()">
-    <div formGroup="title">
-        <label>Title</label>
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Title: </label>
         <input formControlName="title">
     </div>
-    <div formGroup="author">
-        <label>Title</label>
+    <div *ngIf="bookForm.get('title').invalid" style="color: red;"></div>
+    <div>
+        <label>Author: </label>
         <input formControlName="author">
     </div>
-    <div formGroup="description">
-        <label>Title</label>
+    <div>
+        <label>Description: </label>
         <input formControlName="description">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
     </div>
 </form>
