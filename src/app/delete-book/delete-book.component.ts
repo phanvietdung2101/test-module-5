@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
 import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-delete-book',
@@ -11,8 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class DeleteBookComponent implements OnInit {
   book: IBook
-  router: Router
-  constructor(private bookService: BookService,private route: ActivatedRoute) { }
+  constructor(private bookService: BookService,private route: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
     let id:number;
@@ -27,7 +27,7 @@ export class DeleteBookComponent implements OnInit {
   onClick(){
     this.bookService.deleteBook(this.book.id).subscribe(data => 
       {
-        this.router.navigateByUrl("localhost:4200")
+        this.router.navigate(['/'])
       })
   }  
 
